@@ -1,0 +1,44 @@
+{
+  "name": "app-simple",
+  "scripts": {
+    "dev": "webpack serve",
+    "build": "webpack --stats-error-details",
+    "build:prod": "webpack --progress --mode production --env production --env extractCss",
+    "build:ci": "npm run build -- --no-stats",
+    "install:plugin": "npm install ../../",
+    "rimraf": "rimraf dist/**/*.js",
+    "serve": "http-server dist --cors"
+  },
+  "dependencies": {
+    "aurelia-bootstrapper": "^2.3.3",
+    "aurelia-chart": "^0.3.4",
+    "aurelia-dialog": "^2.0.0",
+    "aurelia-webpack-plugin": "https://github.com/aurelia/webpack-plugin",
+    "chart.js": "^3.3.2",
+    "html-webpack-plugin": "^5.3.1",
+    "typescript": "^4.3.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.2.6",
+    "copy-webpack-plugin": "^9.0.0",
+    "css-loader": "5.2.6",
+    "http-server": "^0.12.3",
+    "mini-css-extract-plugin": "1.6.0",
+    "node-sass": "^6.0.0",
+    "postcss-loader": "5.3.0",
+    "sass-loader": "12.0.0",
+    "style-loader": "2.0.0",
+    "ts-loader": "^9.2.3",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "aurelia": {
+    "build": {
+      "resources": [
+        "aurelia-chart/elements/chart-element",
+        "aurelia-chart/attributes/chart-attribute"
+      ]
+    }
+  }
+}

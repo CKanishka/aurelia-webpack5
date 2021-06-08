@@ -1,0 +1,13 @@
+.vscode
+node_modules
+npm-debug.log*
+yarn-error.log
+/dist
+/dist.zip
+/test/*coverage
+/test/coverage*
+/.chrome
+
+/.scannerwork
+
+package-lock\.json
